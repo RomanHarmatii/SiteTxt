@@ -1,0 +1,279 @@
+<!DOCTYPE html> 									<!-- HTML 5 "information" tag -->
+<html lang="en">									<!-- specifying language -->
+
+<head>											<!-- open the <head> tag  -->
+    <meta charset="UTF-8">								<!-- specifies the encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">		<!-- Sets the size of the web page on the scroll-free screen -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">				<!-- The X-UA-Compatible meta tag allows web authors to choose what version of Internet Explorer the page should be rendered as. IE = edge -->
+    <link rel="stylesheet" href="style.css">						<!-- connecting an external css file "style.css" -->
+    <title>CSS Grid Responsive Site</title>	
+
+<style>											/* connects CSS styles */
+body {											/* tyles for "body" tag */
+    margin: 0;										/*<!-- indentation from each edge of the element -->*/
+    font-family: Arial, Helvetica, sans-serif;						/*<!-- sets the font type that will be used -->*/
+    background: #333;									/*<!-- color of background = #333  -->*/
+    color: #fff;									/*<!-- color of test = #fff -->*/
+    font-size: 1.1em;									/*<!-- size of text type = 1.1em -->*/
+    line-height: 1.5;									/*<!-- interrogated interval = 1.5 -->*/
+    text-align: center;									/*<!-- leveling the text in the center -->*/	
+  }											/*<!-- close the "body" styles -->*/
+
+  img {											/*<!-- open CSS styles for "img" tag -->*/
+    display: block;									/*<!-- element view like block -->*/
+    width: 100%;									/*<!-- width element = 100% -->*/
+    height: auto;									/*<!-- height element = auto -->*/
+  }											/*<!-- close the "img" styles -->*/
+
+  h1,											/*<!-- CSS styles for "h1","h2","h3" tags -->*/
+  h2,											/*<!-- CSS styles for "h1","h2","h3" tags -->*/
+  h3 {											/*<!-- open CSS styles for "h1","h2","h3" tags -->*/
+    margin: 0;										/*<!-- indentation from each edge of the element -->*/
+    padding: 1em 0;									/*<!-- sets the indent from the edge of the field to the element -->*/
+  }											/*<!-- close the "h1","h2","h3" styles -->*/
+
+  p {											/*<!-- open CSS styles for "p" tag -->*/
+    margin: 0;										/*<!-- indentation from each edge of the element -->*/
+    padding: 1em 0;									/*<!-- sets the indent from the edge of the field to the element -->*/
+  }											/*<!-- close the "p" styles -->*/
+
+  .btn {										/*<!-- open CSS styles for ".btn" tag -->*/
+    display: inline-block;								/*<!-- element view like inline-block -->*/
+    background: #333;									/*<!-- color of background = #333 -->*/
+    color: #fff;									/*<!-- color of test = #fff -->*/
+    text-decoration: none;								/*<!-- decoration of text = none -->*/
+    padding: 1em 2em;									/*<!-- sets the indent from the edge of the field to the element -->*/
+    border: 1px solid #666;								/*<!-- border style around the element -->*/
+    margin: 0.5em 0;									/*<!-- indentation from each edge of the element -->*/
+  }											/*<!-- close the ".btn" styles -->*/
+
+  .btn:hover {										/*<!-- open CSS styles for ".btn:hover" tag -->*/
+    background: #eaeaea;								/*<!-- color of background = #eaeaea -->*/
+    color: #333;									/*<!-- color of test = #fff -->*/
+  }											/*<!-- close the ".btn:hover" styles -->*/
+
+  /* Header Showcase */									/*<!-- just comment -->*/
+  #showcase {										/*<!-- open CSS styles for "#showcase" tag -->*/
+    min-height: 450px;									/*<!-- minimum element height = 450px -->*/
+    color: #fff;									/*<!-- color of test = #fff -->*/
+    text-align: center;									/*<!-- leveling the text in the center -->*/
+  }											/*<!-- close the "#showcase" styles -->*/
+
+  #showcase .bg-image {									/*<!-- open CSS styles for "#showcase .bg-image" tag -->*/
+    position: absolute;									/*<!-- the method of positioning the element relative to the browser window = absolute -->*/
+    background: #333									/*<!-- color of background = #333 -->*/
+      url("https://static.pexels.com/photos/248515/pexels-photo-248515.png");		/*<!-- link to image of background -->*/
+    background-position: center;							/*<!-- leveling the background in the center -->*/
+    background-repeat: no-repeat;							/*<!-- background don`t repeat -->*/
+    background-size: cover;								/*<!-- scales background image like cover -->*/
+    width: 100%;									/*<!-- width element = 100% -->*/
+    height: 450px;									/*<!-- height element = 450px -->*/
+    z-index: -1;									/*<!-- overlaying elements one on ane -->*/
+    opacity: 0.4;									/*<!-- the level of transparency of the element -->*/
+  }											/*<!-- close the "#showcase .bg-image" styles -->*/
+
+  #showcase h1 {									/*<!-- open CSS styles for "#showcase h1" tag -->*/
+    padding-top: 100px;									/*<!-- the field value from the top edge of the contents of the element = 100px -->*/
+    padding-bottom: 0;									/*<!-- the field value from the lower edge of the contents of the element = 0 -->*/
+  }											/*<!-- close the "#showcase h1" styles -->*/
+
+  #showcase .content-wrap,								/*<!-- CSS styles for "#showcase .content-wrap", "#section-a .content-wrap" tags -->*/
+  #section-a .content-wrap {								/*<!-- open CSS styles for "#showcase .content-wrap", "#section-a .content-wrap" tags -->*/
+    padding: 0 1.5em;									/*<!-- sets the indent from the edge of the field to the element -->*/
+  }											/*<!-- close the "#showcase .content-wrap", "#section-a .content-wrap" styles -->*/
+
+  /* Section A */									/*<!-- just comment -->*/
+  #section-a {										/*<!-- open CSS styles for "#section-a" tag -->*/
+    background: #eaeaea;								/*<!-- color of background = #eaeaea -->*/
+    color: #333;									/*<!-- color of test = #fff -->*/
+    padding-bottom: 2em;								/*<!-- the field value from the lower edge of the contents of the element = 2em -->*/
+  }											/*<!-- close the "#section-a" styles -->*/
+
+  /* Section B */									/*<!-- just comment -->*/
+  #section-b {										/*<!-- open CSS styles for "#section-b" tag -->*/
+    padding: 2em 1em 1em;								/*<!-- sets the indent from the edge of the field to the element -->*/
+  }											/*<!-- close the "#section-b" styles -->*/
+
+  #section-b ul {									/*<!-- open CSS styles for "#section-b ul" tag -->*/
+    list-style: none;									/*<!-- property allows you to set a marker style = none -->*/
+    margin: 0;										/*<!-- indentation from each edge of the element -->*/
+    padding: 0;										/*<!-- sets the indent from the edge of the field to the element -->*/
+  }											/*<!-- close the "#section-b ul" styles -->*/
+
+  #section-b li {									/*<!-- open CSS styles for "#section-b li" tag -->*/
+    margin-bottom: 1em;									/*<!-- the magnitude of the retreat from the lower edge of the element -->*/
+    background: #fff;									/*<!-- color of background = #fff -->*/
+    color: #333;									/*<!-- color of test = #333 -->*/
+  }											/*<!-- close the "#section-b li" styles -->*/
+
+  .card-content {									/*<!-- open CSS styles for ".card content" tag -->*/
+    padding: 1.5em;									/*<!-- sets the indent from the edge of the field to the element -->*/
+  }											/*<!-- close the ".card content" styles -->*/
+
+  /* Section C */									/*<!-- just comment -->*/
+  #section-c {										/*<!-- open CSS styles for "#section-c" tag -->*/
+    background: #fff;									/*<!-- color of background = #fff -->*/
+    color: #333;									/*<!-- color of test = #333 -->*/
+    padding: 2em;									/*<!-- sets the indent from the edge of the field to the element -->*/
+  }											/*<!-- close the "#section-c" styles -->*/
+
+  /* Section D / Boxes */								/*<!-- just comment -->*/
+  #section-d .box {									/*<!-- open CSS styles for "#section-d .box" tag -->*/
+    padding: 2em;									/*<!-- sets the indent from the edge of the field to the element -->*/
+    color: #fff;									/*<!-- color of test = #fff -->*/
+  }											/*<!-- close the "#section-d .box" styles -->*/
+
+  #section-d .box:first-child {								/*<!-- open CSS styles for "#section-d .box:first-child" tag -->*/
+    background: #2690d4;								/*<!-- color of background = #2690d4 -->*/
+  }											/*<!-- close the "#section-d .box:first-child" styles -->*/
+
+  /* Footer */										/*<!-- just comment -->*/
+  #main-footer {									/*<!-- open CSS styles for "#main-footer" tag -->*/
+    padding: 2em;									/*<!-- sets the indent from the edge of the field to the element -->*/
+    background: #000;									/*<!-- color of background = #000 -->*/
+    color: #fff;									/*<!-- color of test = #fff -->*/
+    text-align: center;									/*<!-- leveling the text in the center -->*/
+  }											/*<!-- close the "#main-footer" styles -->*/
+
+  #main-footer a {									/*<!-- open CSS styles for "#main-footer a" tag -->*/
+    color: #2690d4;									/*<!-- color of test = #2690d4 -->*/
+    text-decoration: none;								/*<!-- decoration of text = none -->*/
+  }
+
+/* Media Queries */
+
+  @media (min-width: 700px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    }
+
+    #section-a .content-text {
+      columns: 2;
+      column-gap: 2em;
+    }
+
+    #section-a .content-text p {
+      padding-top: 0;
+    }
+
+    .content-wrap,
+    #section-b ul {
+      grid-column: 2/4;
+    }
+
+    .box,
+    #main-footer div {
+      grid-column: span 2;
+    }
+
+    #section-b ul {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    #section-b li {
+      width: 31%;
+    }											/*<!-- close the "#main-footer a" styles -->*/
+</style>										/*<!-- close CSS styles -->*/
+																<!-- Определяет заголовок документа -->
+</head>																<!-- close the <head> tag.  -->
+
+<body>																<!-- open the <body> tag -->
+    <!-- Header Showcase -->
+    <header id="showcase" class="grid">												<!-- open the <header> tag with id=showcase, class=grid -->
+        <div class="bg-image"></div>												<!-- open and close <div> tag with "bg-image" class -->
+        <div class="content-wrap">												<!-- open <div> tag with "content-wrap" class -->
+            <h1>Welcome to Acme Web Solutions</h1>										<!-- create a headline with h1 style -->
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci eum error earum soluta voluptatum		<!-- create paragraph with some text -->
+                nisi laboriosam eos saepe asperiores dolorum.</p>								<!-- some text + close the paragraph -->
+            <a href="#section-b" class="btn">Read More</a>									<!-- create the link to section-b, class "btn" with text "Read More" -->
+        </div>															<!-- close the <div> tag -->
+    </header>															<!-- close the <header> tag -->
+
+    <!-- Main Area -->
+    <main id="main"> 														<!-- open the <main> tag with id=main -->
+        <!-- Section A -->
+        <section id="section-a" class="grid"> 											<!-- open the <section> tag with id=section-a and class="grig" -->
+            <div class="content-wrap">												<!-- open the <div> tag with class="content-wrap" -->
+                <h2 class="content-title">Web & Application Development</h2>							<!-- create a headline with h2 style -->
+                <div class="content-text">											<!-- open the <div> tag with class="content-text" -->
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sint eligendi possimus? Unde		<!-- open the paragraph and with some text -->
+                        officiis magnam laborum ipsa distinctio odio, vero dolores dicta aliquam aperiam repellendus.		<!-- some text in paragraph -->
+                        Perferendis officiis deserunt velit voluptas nobis sequi						<!-- some text in paragraph -->
+                        animi totam, accusantium, ex eius quia, natus quo?</p>							<!-- some text + close the paragraph -->
+                </div>														<!-- close the <div> tag -->
+            </div>														<!-- close the <div> tag -->
+        </section>														<!-- close the <section> tag -->
+
+        <!-- Section B -->
+        <section id="section-b" class="grid">  											<!-- open the <section> tag with id=section-b and class="grig" -->
+            <ul>														<!-- open the <ul> (unordered list) tag -->
+                <li>														<!-- open the <li> tag (new element in <ul>) -->
+                    <div class="card">												<!-- create the <div> tag with class="card" -->
+                        <img src="https://static.pexels.com/photos/574077/pexels-photo-574077.jpeg" alt=""> 			<!-- create image from "https://static.pexels.com/photos/574077/pexels-photo-574077.jpeg" and alt=""  -->
+                        <div class="card-content">										<!-- open the <div> tag with class="card-content" -->
+                            <h3 class="card-title">Web Development</h3>								<!-- create a headline with h3 style -->
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum culpa neque quo eum et		<!-- open the paragraph with some text -->
+                                quasi velit voluptatum cum maiores exercitationem.</p>						<!-- some text + close the paragraph -->
+                        </div>													<!-- close the <div> tag -->
+                    </div>													<!-- close the <div> tag -->
+                </li>														<!-- close the <li> tag -->
+                <li>														<!-- open the <li> tag (new element in <ul>) -->
+                    <div class="card">												<!-- create the <div> tag with class="card" -->
+                        <img src="https://static.pexels.com/photos/261628/pexels-photo-261628.jpeg" alt="">			<!-- create image from "https://static.pexels.com/photos/261628/pexels-photo-261628.jpeg" and alt=""  -->
+                        <div class="card-content">										<!-- open the <div> tag with class="card-content" -->
+                            <h3 class="card-title">Mobile Applications</h3>							<!-- create a headline with h3 style -->
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum culpa neque quo eum et		<!-- open the paragraph with some text -->
+                                quasi velit voluptatum cum maiores exercitationem.</p>						<!-- some text + close the paragraph -->
+                        </div>													<!-- close the <div> tag -->
+                    </div>													<!-- close the <div> tag -->
+                </li>														<!-- close the <li> tag -->
+                <li>														<!-- open the <li> tag (new element in <ul>) -->
+                    <div class="card">												<!-- create the <div> tag with class="card" -->
+                        <img src="https://static.pexels.com/photos/265087/pexels-photo-265087.jpeg" alt="">			<!-- create image from "https://static.pexels.com/photos/265087/pexels-photo-265087.jpeg" and alt=""  -->
+                        <div class="card-content">										<!-- open the <div> tag with class="card-content" -->
+                            <h3 class="card-title">Tech Marketing</h3>								<!-- create a headline with h3 style -->				
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum culpa neque quo eum et		<!-- open the paragraph with some text -->
+                                quasi velit voluptatum cum maiores exercitationem.</p>						<!-- some text + close the paragraph -->
+                        </div>													<!-- close the <div> tag -->
+                    </div>													<!-- close the <div> tag -->
+                </li>														<!-- close the <li> tag -->
+            </ul>														<!-- close the <ul> tag -->
+        </section>														<!-- close the <section> tag -->
+
+        <!-- Section C -->
+        <section id="section-c" class="grid">											<!-- open the <section> tag with id=section-c and class="grig" -->
+            <div class="content-wrap">												<!-- create the <div> tag with class="content-wrap" -->
+                <h2 class="content-title">We handle all of your digital needs</h2>						<!-- create a headline with h2 style -->		
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime nam rerum vel earum error fugiat		<!-- open the paragraph with some text -->
+                    cupiditate, dolore eius! Minus, explicabo.</p>								<!-- some text + close the paragraph -->
+            </div>														<!-- close the <div> tag -->
+        </section>														<!-- close the <section> tag -->
+
+        <!-- Section D -->
+        <section id="section-d" class="grid">											<!-- open the <section> tag with id=section-d and class="grig" -->
+            <div class="box">													<!-- create the <div> tag with class="box" -->
+                <h2 class="content-title">Contact Us</h2>									<!-- create a headline with h2 style -->				
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, suscipit. Rerum ducimus a quod, ut et		<!-- open the paragraph with some text -->
+                    voluptas obcaecati unde fuga.</p>										<!-- some text + close the paragraph -->
+                <p>contact@acmewebsolutions.test</p>										<!-- open and close the paragraph with some text -->
+            </div>														<!-- close the <div> tag -->
+            <div class="box">													<!-- create the <div> tag with class="box" -->
+                <h2 class="content-title">About Our Company</h2>								<!-- create a headline with h2 style -->					
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio earum porro deserunt, deleniti,		<!-- open the paragraph with some text -->
+                    quae facere repudiandae, officiis est exercitationem nobis iusto doloremque! Soluta excepturi in		<!-- some text -->
+                    aut suscipit amet temporibus quo?</p>									<!-- some text + close the paragraph -->
+            </div>														<!-- close the <div> tag -->
+        </section>														<!-- close the <section> tag -->
+    </main>															<!-- close the <main> tag -->
+
+    <!-- Footer -->
+    <footer id="main-footer" class="grid">											<!-- open the <footer> tag with id="main-footer" and class="grid" -->
+        <div>Acme Web Solutions</div>												<!-- open and close the <div> tag with some text -->
+        <div>Project By <a href="http://traversymedia.com" target="_blank">Traversy Media</a></div>				<!-- open and close the <div> tag with some text + link + target for link -->
+    </footer>															<!-- close the <footer> tag -->
+
+</body>																<!-- close the <body> tag -->
+
+</html>																<!-- close the <html> tag -->
